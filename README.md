@@ -28,5 +28,6 @@ below for environments for other platforms:
 train the Agent:\
 `python ddpg.py`
 - To run the Agent in eval mode we need to pass the checkpoint files as a CLI argument.
+`python ddpg.py --chkp_actor checkpoint_actor.pth --chkp-critic checkpoint_critic.pth`
 - Run the following command for further details:\
 `python ddpg.py -h`

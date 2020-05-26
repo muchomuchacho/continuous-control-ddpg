@@ -1,5 +1,4 @@
-# continuous-control-ddpg
-Continuous Control Project - DDPG
+# Continuous Control Project - DDPG
 
 ![env_1](images/env_1.png)
 

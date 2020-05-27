@@ -48,3 +48,8 @@ Most of the hyperparameters have been tuned at some point along the multiple exp
 The agent solved the environment in `160` episodes. Once that score was reached it was consistently above the required return until the end of the training run which was set for `500 episodes`, reaching a maximum return value of `39.72` multiple times towards the end of the training cycle.
 
 ![Plot](images/Figure_1.png)
+
+## Ideas for Future Work
+* Solve the environment with 20 Agents using D4PG.
+* Solve the Crawler environment.
+* Explore some hyperparameter tuning techniques such as Bayesian optimization or Grid search.

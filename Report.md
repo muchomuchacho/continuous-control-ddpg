@@ -26,7 +26,7 @@ We have two models as explained above, and below is some detail of their composi
 Most of the hyperparameters have been tuned at some point along the multiple experiments performed in order to find the best balance between training speed and model stability. In many cases we have gone back to the original values since they proved to work quite well. One of the values found critical during the experiments was a combination of the epsilon value and the sigma value used in the ` Ornstein–Uhlenbeck` class used to calculate the standard deviation of the noise value. A combination of these two values prooved to be very effective to achieve a good balance between exploration and exploitation; as the slowly moved from a very randon approach to a more 'focused' as it went further into the training process.
 
 | Hyperparameter | Value |
-|---|---:|---|
+|---|---:|
 | Replay buffer size | 1e6 |
 | Replay batch size | 64 |
 | Actor hidden units | 200, 150 |

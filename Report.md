@@ -45,6 +45,6 @@ Most of the hyperparameters have been tuned at some point along the multiple exp
 | Epsilon decay | 0.98 |
 
 ## Plot of Rewards
-The agent solved the environment in 160 episodes. Once that score was reached it was consistently kept until the end of the training run whcih was set for 500 episodes.
+The agent solved the environment in `160` episodes. Once that score was reached it was consistently above the required return until the end of the training run which was set for `500 episodes`, reaching a maximum return value of `39.72` multiple times towards the end of the training cycle.
 
 ![Plot](images/Figure_1.png)

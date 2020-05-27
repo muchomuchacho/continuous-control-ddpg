@@ -22,6 +22,28 @@ We have two models as explained above, and below is some detail of their composi
 * Hidden layer: 300 neurons with ReLU activation
 * Output: `q_value` of `1 node`
 
+### Hyperparameters
+Most of the hyperparameters have been tuned at some point along the multiple experiments performed in order to find the best balance between training speed and model stability. In many cases we have gone back to the original values since they proved to work quite well. One of the values found critical during the experiments was a combination of the epsilon value and the sigma value used in the ` Ornstein–Uhlenbeck` class used to calculate the standard deviation of the noise value. A combination of these two values prooved to be very effective to achieve a good balance between exploration and exploitation; as the slowly moved from a very randon approach to a more 'focused' as it went further into the training process.
+
+| Hyperparameter | Value |
+|---|---:|---|
+| Replay buffer size | 1e6 |
+| Replay batch size | 64 |
+| Actor hidden units | 200, 150 |
+| Critic hidden units | 400, 300 |
+| Actor learning rate | 1e-3 |
+| Critic learning rate | 1e-3 |
+| Tau | 1e-3 |
+| Gamma | 0.99 |
+| Ornstein-Uhlenbeck, mu | 0 |
+| Ornstein-Uhlenbeck, theta | 0.15 |
+| Ornstein-Uhlenbeck, sigma | 0.1 |
+| Num episodes | 500 |
+| Max steps | 1000 |
+| Epsilion start | 1.0 |
+| Epsilon end | 0.01 |
+| Epsilon decay | 0.98 |
+
 ## Plot of Rewards
 The agent solved the environment in 160 episodes. Once that score was reached it was consistently kept until the end of the training run whcih was set for 500 episodes.
 

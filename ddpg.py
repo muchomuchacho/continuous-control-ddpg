@@ -85,17 +85,6 @@ def ddpg(agent, env, brain_name, n_episodes=500, max_t=1000, train=True,
     return scores
 
 
-def play(agent, env):
-
-    state = env.reset()
-    for t in range(200):
-        action = agent.act(state, add_noise=False)
-        env.render()
-        state, reward, done, _ = env.step(action)
-        if done:
-            break
-
-
 @arg('--chkp_actor', '--chkp_critic',
      help='Checkpoint file. If present, agent will run in eval mode.')
 def runner(chkp_actor=None, chkp_critic=None):
